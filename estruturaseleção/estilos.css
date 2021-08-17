@@ -1,0 +1,14 @@
+body{
+    width:600px;
+    margin:auto;
+    background-color:teal;
+    margin-top:100px
+}
+
+div{
+    padding:10px;
+}
+
+li{
+    padding:5px;
+}

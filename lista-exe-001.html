@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> EXERCÍCIO 01 </title>
+         <meta charset="utf-8" />
+         <style>
+             body{
+                 width:600px;
+                 margin-top: 50px;
+                 border:4px solid blue;
+                 border-radius: 20px;
+                 padding:15px;
+             }
+            header{
+                margin-top: 10px;
+            }
+            main{
+                margin-top: 10px;
+            }
+            div{
+                margin-top: 10px;
+            }
+            input{
+                margin-top: 10px;
+            }
+         </style>   
+        <body>
+            <header>
+                EXERCÍCIO 01
+            </header>
+            <main>
+                <div>
+                    <label>Digite um número:</label>
+                    <input type="number" id= n1>
+                </div>
+                <div>
+                    <label>Digite outro número:</label>
+                    <input type="number" id= n2>
+                </div>
+                    <button onClick = calcula() type= "button"> Calcular</button>
+                <div>
+                    <p id = "subtrair"></p>
+                </div>
+            </main>
+            <footer>
+                Desenvolvido por Guilherme Vinaud 2º ADS
+            </footer>
+            <script>
+                function calcula(){
+                let n1= document.getElementById("n1").value
+                let n2 = document.getElementById("n2").value
+                let subtrair = n1 - n2
+                document.getElementById("subtrair").innerHTML = `O resultado da subtração = ${subtrair}`
+                }
+
+            </script>
+        </body>
+    </head>
+</html>
