@@ -6,13 +6,9 @@ body{
 }
 
 div{
-    padding:20px;
+    padding:10px;
 }
 
 li{
     padding:5px;
-}
-main{
-    background-color: white;
-    border-radius: 20px;
 }
