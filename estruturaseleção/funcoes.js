@@ -35,3 +35,66 @@ function exe2(){
 
     document.getElementById("resultado").innerHTML = resultado
 }
+function exe3(){
+    let num1 = Number(document.getElementById("num1").value)
+    let num2 = Number(document.getElementById("num2").value)
+
+    if (num1>num2)
+    {
+        document.getElementById("resultado").innerHTML = `o menor número é ${num2}`
+    }
+    else if(num1<num2)
+    {
+        document.getElementById("resultado").innerHTML = `o menor número é ${num1}`
+    }
+    else {
+        document.getElementById("resultado").innerHTML = `Não existe número meror, ambos são iguais`
+    }
+}
+function exe4(){
+    let num1 = Number(document.getElementById("num1").value)
+    let num2 = Number(document.getElementById("num2").value)
+    let num3 = Number(document.getElementById("num2").value)
+
+    if((num1==num2) && (num2==num3)){
+        document.getElementById("resultado").innerHTML = `Todos os números são iguais`
+    }
+    else if ((num1>num2) && (num1>num3)){
+        document.getElementById("resultado").innerHTML = `O maior número é ${num1}`
+    }
+    else if (num2>num3){
+        document.getElementById("resultado").innerHTML = `O maior número é ${num2}`
+        
+    }else {
+        document.getElementById("resultado").innerHTML = `O maior número é ${num3}`
+    }
+}
+
+function exe5(){
+    let num1 = Number(document.getElementById("num1").value)
+    let num1 = Number(document.getElementById("num1").value)
+    let opcao = Number(document.getElementById("opcao").value)
+
+    let resultado
+    switch(opcao){
+        case 1: resultado = (num1 + num2) / 2
+            break
+        case 2: resultado = if (num1>= num2){
+            resultado = num1 - num2
+        }else {
+            resultado = num2 - num1
+        }
+            break
+        case 3: resultado = (num1 * num2)
+            break 
+        case 4: if (num2!= 0){
+                    resultado = num1 /num2
+                }
+                else {
+                    resultado = "Divisão por zero"
+        }
+            break
+        default: resultado = "opção inválida"
+    }
+    document.getElementById("resultado").innerHTML = resultado
+}
