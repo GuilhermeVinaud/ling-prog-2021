@@ -30,7 +30,7 @@ function exe2(){
     }else if ((media >=7)&&(media <=10)){
         resultado = `Aluno reprovado com média${media}`
     }else {
-        resultado = `Noras informadas são inválidas`
+        resultado = `Notas informadas são inválidas`
     }
 
     document.getElementById("resultado").innerHTML = resultado
@@ -48,7 +48,7 @@ function exe3(){
         document.getElementById("resultado").innerHTML = `o menor número é ${num1}`
     }
     else {
-        document.getElementById("resultado").innerHTML = `Não existe número meror, ambos são iguais`
+        document.getElementById("resultado").innerHTML = `Não existe número menor, ambos são iguais`
     }
 }
 function exe4(){
@@ -79,7 +79,7 @@ function exe5(){
     switch(opcao){
         case 1: resultado = (num1 + num2) / 2
             break
-        case 2: resultado = if (num1>= num2){
+        case 2: if (num1>= num2){
             resultado = num1 - num2
         }else {
             resultado = num2 - num1
@@ -94,7 +94,7 @@ function exe5(){
                     resultado = "Divisão por zero"
         }
             break
-        default: resultado = "opção inválida"
+        default: resultado = "Opção inválida"
     }
     document.getElementById("resultado").innerHTML = resultado
 }
