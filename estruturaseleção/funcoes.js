@@ -9,10 +9,10 @@ function exe1(){
     let media = (nota1 + nota2 + nota3 + nota4 ) / 4
 
     if (media >= 7){
-        document.getElementById("resultado").innerHTML = `A média é ${media} está aprovada`
+        document.getElementById("resultado").innerHTML = `A média é ${media} está aprovado`
     }
     else{
-        document.getElementById("resultado").innerHTML = `A média é ${media} está reprovada`
+        document.getElementById("resultado").innerHTML = `A média é ${media} está reprovado`
     }
 
 }
@@ -23,28 +23,26 @@ function exe2(){
 
     let media = (nota1 + nota2) / 2
 
-    if ((media >=0)&& (media < 3)){
+    if ((media >=0) && (media < 3)){
         resultado = `Aluno aprovado com média ${media}`
     }else if((media>= 3)(media < 7)){
         resultado = `Aluno em exame  com média ${media}`
     }else if ((media >=7)&&(media <=10)){
-        resultado = `Aluno reprovado com média${media}`
+        resultado = `Aluno reprovado com média ${media}`
     }else {
         resultado = `Notas informadas são inválidas`
     }
-
+    // mostra resultado
     document.getElementById("resultado").innerHTML = resultado
 }
 function exe3(){
     let num1 = Number(document.getElementById("num1").value)
     let num2 = Number(document.getElementById("num2").value)
 
-    if (num1>num2)
-    {
+    if (num1>num2){
         document.getElementById("resultado").innerHTML = `o menor número é ${num2}`
     }
-    else if(num1<num2)
-    {
+    else if(num1<num2){
         document.getElementById("resultado").innerHTML = `o menor número é ${num1}`
     }
     else {
@@ -98,3 +96,32 @@ function exe5(){
     }
     document.getElementById("resultado").innerHTML = resultado
 }
+function exe6(){
+    let num1 = Number(document.getElementById("num1").value)
+    let num1 = Number(document.getElementById("num1").value)
+    let opcao  = (document.getElementById("opcao").value)
+
+    let resultado
+    switch(opcao){
+        case 'a': resultado = `O resultado da exponenciação é${Math.pow(num1,num2)}`
+                    break
+        case 'b': resultado = `O resultado das raízes quadradas são: ${Math.sqrt(num1)} e ${Math.sqrt(num2)}` 
+            break
+        case 'c': resultado = `O resultado das raízes cúbicas são: ${Math.cbrt(num1)} e ${Math.cbrt(num2)}`
+            break     
+        default: resultado = `Valor inválido`
+    }
+    document.getElementById("resultado").innerHTML = resultado
+}
+function exe7(){
+    let sal = Number(document.getElementById("sal").value)
+    
+    
+    if(sal<500){
+        resultado = sal + (sal * 0.3)
+        document.getElementById("resultado").innerHTML = `O novo sálario será reajustado para ${resultado}`
+    }
+    else{
+        document.getElementById("resultado").innerHTML = `O salario não poderá receber reajuste `
+    }
+}   
