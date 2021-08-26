@@ -36,8 +36,8 @@ function exe2(){
     document.getElementById("resultado").innerHTML = resultado
 }
 function exe3(){
-    let num1 = Number(document.getElementById("num1").value)
-    let num2 = Number(document.getElementById("num2").value)
+    let nro1 = Number(document.getElementById("num1").value)
+    let nro2 = Number(document.getElementById("num2").value)
 
     if (num1>num2){
         document.getElementById("resultado").innerHTML = `o menor número é ${num2}`
@@ -218,9 +218,10 @@ function exe12(){
 }
 function exe13(){
     let preco = Number(document.getElementById("preco").value)
+    let novo_preco=0
 
     if(preco<=50){
-       novo_preco = preco * 1.05
+       novo_preco = preco + (preco * 5 / 100)
         document.getElementById("novo_preco").innerHTML = `Novo preço = R$${resultado}`
     }
     else if((preco>50)&&(preco>=100)){
