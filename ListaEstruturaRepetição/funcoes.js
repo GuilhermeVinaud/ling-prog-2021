@@ -10,27 +10,21 @@ function exe0(){
     }
     alert(`A média de preço dos produto é ${soma/10}`)
 }
-function exe1(){
-    let vetor= new int[4]
-    let vetor1=new int[4]
-    let contador = 4
 
-   for(int=0;int<5;int++){
-        let numero = Number(prompt(`Informe um número :`))
-        vetor[int]=numero
-    }
+function exe2(){
+    let valor = Number(prompt(`Digite o valor do ingresso:`))
+    let despesas = 200
+    let ingressos = 94
+    let lucro 
 
-    for(int=0;int<5;int++){
-        vetor1[int]=vetor[contador] ; contador --
+    for(valor = 5.0; valor <= 5 && valor > 0; valor = valor - 0.50){
+        ingressos = ingressos + 26
+        lucro = ( ingressos * valor - despesas) / ingressos  
+        alert(`O lucro será ${(lucro).toFixed(2)} para ingressos no valor de ${(valor).toFixed(2)}\n`)   
     }
-
-    for(int=0;int<5;int++){
-        alert(`Ordem crescente:${vetor[int]},`)
-    }
-    for(int=0;int<5;int++){
-        alert(`Ordem decrescente:${vetor[int]},`)
-    }
-
+      
+        
+   
 }
 
 function exe3()
@@ -63,6 +57,20 @@ function exe3()
     alert(`Percentual da faixa 1 ${f1/8*100} Percentual da faixa 5 ${f5/8*100}`)
 }
 
+function exe4(){
+
+    let numero = Number(prompt(`Digite um número:`))
+    let produto
+    
+
+    for(n = 1; n>0 && n<=10; n++){
+        produto = numero * n
+    alert(`${numero} x ${n}= ${produto}\n`)
+   
+    }
+    
+}
+
 function exe6(){
     let contador = 1
     let valor
@@ -71,26 +79,29 @@ function exe6(){
     let totalPrazo = 0
     while(contador<=15){
         valor = Number(prompt(`Informe o valor do produto${contador}`))
-        opcao = prompt(`Informe o tipo de transação v-à vista p-a prazo:`).toUpperCase()
+        opcao = prompt(`Informe o tipo de transação \nV-à vista \nP-a prazo:`).toUpperCase()
         switch(opcao){
             case 'V':totalVista += valor
+                break
             case 'P':totalPrazo+= valor
+                break
             default: alert(`Forma de Pagamento Inválida`)
         }
         contador++
     }
-    alert(`Total á vista${totalVista.toFixed(2)} Total à prazo${totalPrazo.toFixed(2)} Toral geral ${(totalVista + totalPrazo).toFixed(2)}`)
-    alert(`Primeira parcela do valor total à vista${(totalPrazo/3).toFixed(2)}`)
+    alert(`Total à vista R$${totalVista.toFixed(2)} Total à prazo R$${totalPrazo.toFixed(2)} Total geral R$${(totalVista + totalPrazo).toFixed(2)}`)
+    alert(`Primeira parcela do valor total à vista R$${(totalPrazo/3).toFixed(2)}`)
 }
 
 function exe23()
 {
     let opcao
+    let salario
     do{
         
         opcao = Number(prompt(`Digite \n1.Novo Salário \n2.Férias \n3.Décimo terceiro \n4.Sair`))
         switch(opcao){
-            case 1:let salario = Number(prompt(`Informe o salário`))
+            case 1: salario = Number(prompt(`Informe o salário`))
                     let novoSalario = salario
                     if(salario < 210){
                     novoSalario = salario + (15*salario)/100
@@ -99,15 +110,15 @@ function exe23()
                     }else{
                     novoSalario = salario + (5*salario/100)   
                     }
-                    alert(`O novo salário é de ${novoSalario}`)
+                    alert(`O novo salário é de R$${novoSalario.toFixed(2)}`)
                     break
 
-            case 2:let salario1 = Number(prompt(`Informe o salário`))
-                    alert(`As férias serão ${salario1 + salario1/3}`)
+            case 2: salario = Number(prompt(`Informe o salário`))
+                    alert(`As férias serão R$${(salario2 + salario2/3).toFixed(2)}`)
                     break
-            case 3:let salario2 = Number(prompt(`Informe o salário`))
+            case 3:  salario = Number(prompt(`Informe o salário`))
                     let meses = Number(prompt(`Informe quantos meses foram trabalhados`))
-                    alert(`Décimo terceiro${salario2 * meses/12}`)
+                    alert(`Décimo terceiro R$${(salario3 * meses/12).toFixed(2)}`)
                     break
             case 4: alert(`O programa será encerrado`)
             default: alert(`Opção inválida`)
