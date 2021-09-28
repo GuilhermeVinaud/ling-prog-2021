@@ -150,7 +150,21 @@ function exe6(){
     alert(`Primeira parcela do valor total à vista R$${(totalPrazo/3).toFixed(2)}`)
 }
 
+function exe8(){
+    let idade = Number(prompt(`Digite a idade:`))
+    let peso = Number(prompt(`Digite o peso:`))
+    let altura = Number(prompt(`Digite a altura:`))
+    let olhos = String(prompt(`Insira a cor dos olhos A-azul; \n P-preto; \n V-verde; \n C-castanho :`))
+    let cabelo = String(prompt(`Insira a cor dos cabelos P-preto \n C-castanho \n L-louro \n R-ruivo: `))
 
+    if (idade>50 && peso < 60){
+        idade++
+        peso++
+    }
+    if (altura<1.50){
+        altura++
+    }
+}
 
 function exe21(){
     let opcao
