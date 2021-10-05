@@ -90,8 +90,45 @@ function exe3()
             alert(`Código inexistente`)
         }
     }while(opcao=!0)
+    
     for(let i=0; i<10; i++){
         alert(`Códido do produto:${cod} e quantidade: ${quant}`)
     }
     
+}
+
+
+function exe6()
+{
+    let vetNomes = new Array(10)
+    let vendas = new Array(10)
+    let comissao = new Array(10)
+
+    for(let i=0; i<10; i++){
+        vetNomes[i] = prompt(`Informe o nome do vendedor${i+1}:`))
+        vendas[i] = Number(prompt(`Informe o total de vendas ${i+1}:`))
+        comissao[i] = Number(prompt(`Informe a porcentagem da comissão ${i+1}:`))
+    }
+    let totalVendas = 0
+    let maior = 0
+    let nomeMaior = 0
+    let menor = 100000
+    let nomeMenor = "" 
+
+    for(let i=0; i<10; i++){
+        let receber = (vendas[i]* comissao[i])/100
+      if(receber>maior){
+            maior=receber
+            nomeMaior = vetNomes[i]
+        }
+        if(receber < menor){
+            menor = receber
+            nomeMenor = vetNomes[i]
+        }
+        alert(`O vendedor  ${vetnomes} vai receber ${receber} vendas`)
+       totalVendas = totalVendas + vendas[i]
+    }
+    alert(`O total de vendas foi de ${totalVendas}`)
+    alert(`O maior valor a receber é ${maior} do vendedor ${nomeMaior}`)
+    alert(`O menor valor a receber é ${menor} do vendedor ${nomeMenor}`)   
 }
