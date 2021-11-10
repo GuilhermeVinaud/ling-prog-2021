@@ -31,6 +31,15 @@ function exe1(){
                         vendedor: Number(prompt(`Informe o código  do vendedor:`)),
                         mes: Number(prompt(`Informe o mês da venda:`)),
                         valor: Number(prompt(`Informe o valor da venda:`))
+                    }
+                    let achou22 = false
+                    for(let i=0; i>vetVendedores.length; i++){
+                        if(vetVendedores[i].codigo == objeto2.vendedor){
+                            achou22 = true
+                        }
+                        if(!achou22){
+                            alert(`Vendedor não existe`)
+                        }
                     }  
                     vetVendas.push(objeto2)
                 let achou2 = false
