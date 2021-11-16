@@ -96,7 +96,7 @@ function consultarVendaVendedor(vetVendas,codInteresse){
                 achou = true
         }
     }
-    alert(`Total de vendas = ${vetor[i].totalVendas} `) 
+    alert(`Total de vendas = ${Primos[i].totalVendas} `) 
                 
 }
 function maiorVendedor(vetVendas,mesInteresse){
